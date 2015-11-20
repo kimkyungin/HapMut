@@ -1,6 +1,3 @@
--- path = "/Users/arrti/Documents/HapBlock2/C/ucharray.so"
--- uc = package.loadlib(path, "luaopen_ucharray")()
-
 local aux = require"auxlib"
 local chr2num = aux.chr2num
 local make_ref = aux.make_ref
@@ -14,11 +11,10 @@ local make_hapblock = blib.mkhapblock
 local make_blockread = blib.mkblockread
 local assign_prob = blib.assignpr
 
--- local genome = "/Users/arrti/Public/human_g1k_v37.fasta"
--- genome = "/Users/arrti/Documents/LongRead/db/human_g1k_v37.fasta"
+-- local genome = "human_g1k_v37.fasta"
 -- local chr = "21"
--- local nbam = "/Users/arrti/Public/pe_30x_e1p_002h_m00.sorted.bam"
--- local tbam = "/Users/arrti/Public/pe_30x_e1p_002h_m06.sorted.bam"
+-- local nbam = "pe_30x_e1p_002h_m00.sorted.bam"
+-- local tbam = "pe_30x_e1p_002h_m06.sorted.bam"
 
 genome, chr, nbam, tbam = arg[1], arg[2], arg[3], arg[4]
 local chr = chr2num(chr)
