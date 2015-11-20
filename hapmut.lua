@@ -53,7 +53,7 @@ for i = 1, #out_pos do
    local somatic = posterior(out[pos])
    if somatic then
       local ref_allele = string.char(ref[pos])
-      io.write(pos + 1 .. "\t") -- return to 1-based genomic position
+      io.write(pos .. "\t") -- 0-based genomic position
       io.write(ref_allele .. "\t")
       io.write(dna[ref_allele][somatic.imax] .. "\t")
       io.write(table.concat(somatic.prob, "\t"))
